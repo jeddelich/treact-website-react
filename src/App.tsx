@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from '@/components/layout/Navbar'
 import features from '@/data/features'
 import FeatureCard from './components/ui/FeatureCard'
+import steps from '@/data/steps'
+import StepCard from './components/ui/StepCard'
 
 function App() {
 
@@ -133,35 +135,16 @@ function App() {
                 <span className="highlight-color">Get Started.</span>
               </h4>
               <div className="steps__list">
-                <div className="list__step">
-                  <div className="list__step--number">01</div>
-                  <div className="step__description">
-                    <h4 className="step__title">Register</h4>
-                    <p className="list__step--para">
-                      Create an account with us using Google or Facebook.
-                    </p>
-                  </div>
-                </div>
-                <div className="list__step">
-                  <div className="list__step--number">02</div>
-                  <div className="step__description">
-                    <h4 className="step__title">Download</h4>
-                    <p className="list__step--para">
-                      Browse and Download the template that you like from the
-                      marketplace.
-                    </p>
-                  </div>
-                </div>
-                <div className="list__step">
-                  <div className="list__step--number">03</div>
-                  <div className="step__description">
-                    <h4 className="step__title">Run</h4>
-                    <p className="list__step--para">
-                      Follow the instructions to setup and customize the
-                      template to your needs.
-                    </p>
-                  </div>
-                </div>
+                {
+                  steps.map((step) => (
+                    <StepCard
+                      key={step.number}
+                      number={step.number}
+                      title={step.title}
+                      para={step.para}
+                    />
+                  ))
+                }
               </div>
             </div>
           </div>
