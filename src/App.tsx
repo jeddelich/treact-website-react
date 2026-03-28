@@ -6,6 +6,8 @@ import FeatureCard from './components/ui/FeatureCard'
 import steps from '@/data/steps'
 import StepCard from './components/ui/StepCard'
 import Footer from './components/layout/Footer'
+import values from '@/data/values'
+import ValueCard from './components/ui/ValueCard'
 
 function App() {
 
@@ -170,30 +172,16 @@ function App() {
                 ullam repudiandae!
               </p>
               <div className="values__list">
-                <div className="list__value">
-                  <div className="value__header">
-                    <figure className="value__icon--wrapper">
-                      <i className="fa-solid fa-dollar-sign"></i>
-                    </figure>
-                    <h3 className="value__title">Affordable</h3>
-                  </div>
-                  <p className="value__para">
-                    We promise to offer you the best rate we can - at par with
-                    the industry standard.
-                  </p>
-                </div>
-                <div className="list__value">
-                  <div className="value__header">
-                    <figure className="value__icon--wrapper">
-                      <i className="fa-solid fa-briefcase"></i>
-                    </figure>
-                    <h3 className="value__title">Professionalism</h3>
-                  </div>
-                  <p className="value__para">
-                    We assure you that our templates are designed and created by
-                    professional designers.
-                  </p>
-                </div>
+                {
+                  values.map((value) => (
+                    <ValueCard
+                      key={value.title}
+                      icon={value.icon}
+                      title={value.title}
+                      para={value.para}
+                    />
+                  ))
+                }
               </div>
               <button className="quality-work__button not-working">
                 Learn More
