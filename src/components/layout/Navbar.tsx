@@ -22,7 +22,7 @@ const { openMenu, closeMenu } = useMenu();
           </div>
           <ul className="nav__list">
             <Link
-              href="#quality-work"
+              href="#features"
               linkName="About"
               itemClass="nav__link"
               linkClass="nav__link--anchor"

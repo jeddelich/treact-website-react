@@ -12,6 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body.menu--open {
+  overflow: hidden;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -133,11 +139,8 @@ NAVIGATION BAR
   position: relative;
 }
 
-.nav__link:hover .nav__link--underline {
-  opacity: 1;
-}
-
-.nav__link--login:hover .nav__link--underline-2 {
+.nav__link--anchor:hover ~ .nav__link--underline,
+.nav__link--anchor:hover ~ .nav__link--underline-2 {
   opacity: 1;
 }
 
@@ -181,6 +184,22 @@ NAVIGATION BAR
 }
 
 .menu__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(36, 62, 99, 0.35);
+  cursor: default;
+}
+
+.menu__panel {
   position: absolute;
   background-color: #f7fafc;
   border: 1px solid lightgray;
@@ -189,12 +208,9 @@ NAVIGATION BAR
   left: 20px;
   right: 20px;
   bottom: 25%;
-  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
-  opacity: 0;
 }
 
 @keyframes slideIn {
@@ -209,6 +225,10 @@ NAVIGATION BAR
 .menu--open .menu__backdrop {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
+}
+
+.menu--open .menu__panel {
   animation: slideIn 1s;
 }
 
@@ -541,7 +561,7 @@ VALUES
   padding: 0 32px;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .values__side--left {
@@ -1017,7 +1037,7 @@ FOOTER
     transition: all 300ms ease;
 }
 
-.footer__column--link:hover .footer__link--underline {
+.footer__column--anchor:hover ~ .footer__link--underline {
     opacity: 1;
 }
 
@@ -1031,7 +1051,7 @@ FOOTER
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 72px;
+  margin: 72px 0;
 }
 
 .footer__branding {
