@@ -1,11 +1,31 @@
-function Link({href, linkName, disabled}: {href?: string, linkName: string, disabled?: string}) {
+function Link({
+  href,
+  linkName,
+  status,
+  itemClass,
+  linkClass,
+  underline,
+  onClick,
+}: {
+  href?: string;
+  linkName: string;
+  status?: string;
+  itemClass?: string;
+  linkClass?: string;
+  underline?: string;
+  onClick?: () => void;
+}) {
   return (
-    <li className="nav__link">
-      <a className={`nav__link--anchor` + " " + (disabled ? disabled : "")} href={href}>
+    <li className={itemClass}>
+      <a
+        className={`${linkClass} ${status ? status : ""}`}
+        href={href}
+        onClick={onClick}
+      >
         {" "}
         {linkName}{" "}
       </a>
-      <div className="nav__link--underline"></div>
+      <div className={underline}></div>
     </li>
   );
 }

@@ -1,4 +1,5 @@
 import Link from "../ui/Link";
+import Modal from "../ui/Modal";
 
 function Navbar() {
   function openMenu() {
@@ -24,10 +25,34 @@ function Navbar() {
             <div className="nav__logo--title">Treact</div>
           </div>
           <ul className="nav__list">
-            <Link href="#quality-work" linkName="About" />
-            <Link linkName="Blog" disabled="not-working" />
-            <Link href="#pricing" linkName="Pricing" />
-            <Link linkName="Contact Us" disabled="not-working" />
+            <Link
+              href="#quality-work"
+              linkName="About"
+              itemClass="nav__link"
+              linkClass="nav__link--anchor"
+              underline="nav__link--underline"
+            />
+            <Link
+              linkName="Blog"
+              status="not-working"
+              itemClass="nav__link"
+              linkClass="nav__link--anchor"
+              underline="nav__link--underline"
+            />
+            <Link
+              href="#pricing"
+              linkName="Pricing"
+              itemClass="nav__link"
+              linkClass="nav__link--anchor"
+              underline="nav__link--underline"
+            />
+            <Link
+              linkName="Contact Us"
+              status="not-working"
+              itemClass="nav__link"
+              linkClass="nav__link--anchor"
+              underline="nav__link--underline"
+            />
           </ul>
           <ul className="nav__members">
             <li className="nav__link--login">
@@ -42,51 +67,10 @@ function Navbar() {
               </button>
             </li>
           </ul>
-          <button className="button__menu">
+          <button className="button__menu" onClick={openMenu}>
             <i className="fa-solid fa-bars" onClick={openMenu}></i>
           </button>
-          <div className="menu__backdrop">
-            <button
-              className="button__menu button__menu--close"
-              onClick={closeMenu}
-            >
-              <i className="fa-solid fa-times"></i>
-            </button>
-            <ul className="menu__links">
-              <li className="menu__list">
-                <a
-                  href="#quality-work"
-                  className="menu__list--link"
-                  onClick={closeMenu}
-                >
-                  About
-                </a>
-              </li>
-              <li className="menu__list">
-                <a className="menu__list--link not-working">Blog</a>
-              </li>
-              <li className="menu__list">
-                <a
-                  href="#pricing"
-                  className="menu__list--link"
-                  onClick={closeMenu}
-                >
-                  Pricing
-                </a>
-              </li>
-              <li className="menu__list">
-                <a className="menu__list--link not-working">Contact Us</a>
-              </li>
-              <li className="menu__list">
-                <a className="menu__list--link not-working">Login</a>
-              </li>
-              <li className="menu__list">
-                <a className="menu__list--link menu__link--primary not-working">
-                  Sign Up
-                </a>
-              </li>
-            </ul>
-          </div>
+          <Modal closeMenu={closeMenu} />
         </div>
       </div>
     </nav>
