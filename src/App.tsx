@@ -1,13 +1,21 @@
+// Styles
+import '@/App.css'
 
-import './App.css'
-import Navbar from '@/components/layout/Navbar'
+// Data
 import features from '@/data/features'
-import FeatureCard from './components/ui/FeatureCard'
 import steps from '@/data/steps'
-import StepCard from './components/ui/StepCard'
-import Footer from './components/layout/Footer'
 import values from '@/data/values'
-import ValueCard from './components/ui/ValueCard'
+import plans from '@/data/plans'
+
+// Layout
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+
+// UI
+import FeatureCard from '@/components/ui/FeatureCard'
+import StepCard from '@/components/ui/StepCard'
+import ValueCard from '@/components/ui/ValueCard'
+import PlanCard from '@/components/ui/PlanCard'
 
 function App() {
 
@@ -213,66 +221,18 @@ function App() {
               accusantium reprehenderit asperiores a officia minus.
             </p>
             <div className="pricing__list">
-              <div className="pricing__list--plan">
-                <div className="plan__stripe"></div>
-                <div className="list__plan--top-half">
-                  <h3 className="plan__title">Personal</h3>
-                  <div className="plan__price">$17.99</div>
-                  <div className="plan__period">Monthly</div>
-                </div>
-                <hr className="pricing__line--break" />
-                <div className="list__plan--bottom-half">
-                  <div className="plan__target-audience">For Individuals</div>
-                  <ul className="plan__highlights">
-                    <li className="plan__highlight">30 Templates</li>
-                    <li className="plan__highlight">7 Landing Pages</li>
-                    <li className="plan__highlight">12 Internal Pages</li>
-                    <li className="plan__highlight">Basic Assistance</li>
-                  </ul>
-                </div>
-                <hr className="pricing__line--break" />
-                <button className="plan__button not-working">Buy Now</button>
-              </div>
-              <div className="pricing__list--plan">
-                <div className="plan__stripe"></div>
-                <div className="list__plan--top-half">
-                  <h3 className="plan__title">Business</h3>
-                  <div className="plan__price">$37.99</div>
-                  <div className="plan__period">Monthly</div>
-                </div>
-                <hr className="pricing__line--break" />
-                <div className="list__plan--bottom-half">
-                  <div className="plan__target-audience">For Small Businesses</div>
-                  <ul className="plan__highlights">
-                    <li className="plan__highlight">60 Templates</li>
-                    <li className="plan__highlight">15 Landing Pages</li>
-                    <li className="plan__highlight">22 Internal Pages</li>
-                    <li className="plan__highlight">Priority Assistance</li>
-                  </ul>
-                </div>
-                <hr className="pricing__line--break" />
-                <button className="plan__button not-working">Buy Now</button>
-              </div>
-              <div className="pricing__list--plan">
-                <div className="plan__stripe"></div>
-                <div className="list__plan--top-half">
-                  <h3 className="plan__title">Enterprise</h3>
-                  <div className="plan__price">$57.99</div>
-                  <div className="plan__period">Monthly</div>
-                </div>
-                <hr className="pricing__line--break" />
-                <div className="list__plan--bottom-half">
-                  <div className="plan__target-audience">For Large Companies</div>
-                  <ul className="plan__highlights">
-                    <li className="plan__highlight">90 Templates</li>
-                    <li className="plan__highlight">27 Landing Pages</li>
-                    <li className="plan__highlight">37 Internal Pages</li>
-                    <li className="plan__highlight">Personal Assistance</li>
-                  </ul>
-                </div>
-                <hr className="pricing__line--break" />
-                <button className="plan__button not-working">Buy Now</button>
-              </div>
+              {
+                plans.map((plan) => (
+                  <PlanCard
+                    key={plan.title}
+                    title={plan.title}
+                    price={plan.price}
+                    subscription={plan.subscription}
+                    targetAudience={plan.targetAudience}
+                    highlights={plan.highlights}
+                  />
+                ))
+              }
             </div>
           </div>
         </div>
