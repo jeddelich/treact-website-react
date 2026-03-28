@@ -164,7 +164,7 @@ NAVIGATION BAR
 }
 
 .not-working {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 .button__menu {

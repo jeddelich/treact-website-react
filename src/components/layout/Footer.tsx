@@ -1,5 +1,6 @@
 import footerLinks from "@/data/footerLinks";
 import FooterColumn from "./FooterColumn";
+import IconButton from "../ui/IconButton";
 
 function Footer() {
   return (
@@ -24,15 +25,9 @@ function Footer() {
             &copy; 2018 Treact Inc. All Rights Reserved.
           </div>
           <div className="footer__social-media">
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-facebook-f"></i>
-            </div>
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-twitter"></i>
-            </div>
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-youtube"></i>
-            </div>
+            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-facebook-f" status="not-working" />
+            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-twitter" status="not-working" />
+            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-youtube" status="not-working" />
           </div>
         </div>
       </div>
