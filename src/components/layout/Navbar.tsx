@@ -1,3 +1,5 @@
+import Link from "../ui/Link";
+
 function Navbar() {
   function openMenu() {
     document.body.classList += " menu--open";
@@ -22,28 +24,10 @@ function Navbar() {
             <div className="nav__logo--title">Treact</div>
           </div>
           <ul className="nav__list">
-            <li className="nav__link">
-              <a className="nav__link--anchor" href="#quality-work">
-                {" "}
-                About{" "}
-              </a>
-              <div className="nav__link--underline"></div>
-            </li>
-            <li className="nav__link">
-              <a className="nav__link--anchor not-working"> Blog </a>
-              <div className="nav__link--underline"></div>
-            </li>
-            <li className="nav__link">
-              <a className="nav__link--anchor" href="#pricing">
-                {" "}
-                Pricing{" "}
-              </a>
-              <div className="nav__link--underline"></div>
-            </li>
-            <li className="nav__link">
-              <a className="nav__link--anchor not-working"> Contact Us </a>
-              <div className="nav__link--underline"></div>
-            </li>
+            <Link href="#quality-work" linkName="About" />
+            <Link linkName="Blog" disabled="not-working" />
+            <Link href="#pricing" linkName="Pricing" />
+            <Link linkName="Contact Us" disabled="not-working" />
           </ul>
           <ul className="nav__members">
             <li className="nav__link--login">
