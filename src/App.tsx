@@ -5,6 +5,7 @@ import features from '@/data/features'
 import FeatureCard from './components/ui/FeatureCard'
 import steps from '@/data/steps'
 import StepCard from './components/ui/StepCard'
+import Footer from './components/layout/Footer'
 
 function App() {
 
@@ -392,132 +393,7 @@ function App() {
       </section>
     </main>
 
-    <footer>
-      <div className="row footer__row">
-        <div className="footer__columns">
-          <div className="footer__column">
-            <div className="footer__column--title">Main</div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Blog</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">FAQs</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Support</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">About Us</a>
-              <div className="footer__link--underline"></div>
-            </div>
-          </div>
-          <div className="footer__column">
-            <div className="footer__column--title">Product</div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Log In</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Personal</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Business</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Team</a>
-              <div className="footer__link--underline"></div>
-            </div>
-          </div>
-          <div className="footer__column">
-            <div className="footer__column--title">Press</div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Logos</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Events</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Stories</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Office</a>
-              <div className="footer__link--underline"></div>
-            </div>
-          </div>
-          <div className="footer__column">
-            <div className="footer__column--title">Team</div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Career</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Founders</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Culture</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Onboarding</a>
-              <div className="footer__link--underline"></div>
-            </div>
-          </div>
-          <div className="footer__column">
-            <div className="footer__column--title">Legal</div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">GDPR</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Privacy Policy</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Terms of Service</a>
-              <div className="footer__link--underline"></div>
-            </div>
-            <div className="footer__column--link">
-              <a className="footer__column--anchor">Disclaimer</a>
-              <div className="footer__link--underline"></div>
-            </div>
-          </div>
-        </div>
-        <hr className="footer__break" />
-        <div className="footer__bottom">
-          <div className="footer__branding">
-            <img
-              className="footer__logo"
-              src="https://module-2-fp-example-website.vercel.app/assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
-              alt=""
-            />
-            <h5 className="footer__logo--text">Treact Inc.</h5>
-          </div>
-          <div className="footer__copyright">
-            &copy; 2018 Treact Inc. All Rights Reserved.
-          </div>
-          <div className="footer__social-media">
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-facebook-f"></i>
-            </div>
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-twitter"></i>
-            </div>
-            <div className="footer__icon--wrapper">
-              <i className="fa-brands fa-youtube"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer />
     </>
   )
 }
