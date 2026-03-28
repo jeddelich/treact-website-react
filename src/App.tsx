@@ -1,6 +1,8 @@
 
 import './App.css'
 import Navbar from '@/components/layout/Navbar'
+import features from '@/data/features'
+import FeatureCard from './components/ui/FeatureCard'
 
 function App() {
 
@@ -65,102 +67,16 @@ function App() {
             </div>
             <div className="features">
               <div className="feature__list">
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
-                      alt=""
-                      className="feature__img"
+                {
+                  features.map((feature) => (
+                    <FeatureCard
+                      key={feature.id}
+                      icon={feature.icon}
+                      title={feature.title}
+                      para={feature.para}
                     />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">Secure</h2>
-                    <p className="feature__para">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt, ullam.
-                    </p>
-                  </div>
-                </div>
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
-                      alt=""
-                      className="feature__img"
-                    />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">24/7 Support</h2>
-                    <p className="feature__para">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ex, sequi?
-                    </p>
-                  </div>
-                </div>
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
-                      alt=""
-                      className="feature__img"
-                    />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">Customizable</h2>
-                    <p className="feature__para">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ratione, minima.
-                    </p>
-                  </div>
-                </div>
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
-                      alt=""
-                      className="feature__img"
-                    />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">Reliable</h2>
-                    <p className="feature__para">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Saepe, possimus!
-                    </p>
-                  </div>
-                </div>
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
-                      alt=""
-                      className="feature__img"
-                    />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">Fast</h2>
-                    <p className="feature__para">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptatibus, numquam.
-                    </p>
-                  </div>
-                </div>
-                <div className="feature">
-                  <figure className="feature__img--wrapper">
-                    <img
-                      src="https://module-2-fp-example-website.vercel.app/assets/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
-                      alt=""
-                      className="feature__img"
-                    />
-                  </figure>
-                  <div className="feature__description">
-                    <h2 className="feature__title">Easy</h2>
-                    <p className="feature__para">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Reiciendis, nobis.
-                    </p>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
             </div>
           </div>
