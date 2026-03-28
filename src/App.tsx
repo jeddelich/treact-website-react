@@ -172,7 +172,7 @@ function App() {
                   We Always Abide by Our
                   <span className="highlight-color"> Principles.</span>
                 </h4>
-                <p className="section__para">
+                <p className="section__text">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic,
                   consectetur! Aperiam distinctio, architecto accusantium
                   obcaecati saepe asperiores porro in ipsum voluptatem harum, a,
