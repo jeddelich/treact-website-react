@@ -7,9 +7,13 @@ function Footer() {
     <footer>
       <div className="row footer__row">
         <div className="footer__columns">
-            {footerLinks.map((column) => (
-                <FooterColumn key={column.title} title={column.title} links={column.links} />
-            ))}
+          {footerLinks.map((column) => (
+            <FooterColumn
+              key={column.title}
+              title={column.title}
+              links={column.links}
+            />
+          ))}
         </div>
         <hr className="footer__break" />
         <div className="footer__bottom">
@@ -25,9 +29,21 @@ function Footer() {
             &copy; 2018 Treact Inc. All Rights Reserved.
           </div>
           <div className="footer__social-media">
-            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-facebook-f" status="not-working" />
-            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-twitter" status="not-working" />
-            <IconButton wrapper="footer__icon--wrapper" icon="fa-brands fa-youtube" status="not-working" />
+            <IconButton
+              wrapper="footer__icon--wrapper"
+              icon="fa-brands fa-facebook-f"
+              status="not-working"
+            />
+            <IconButton
+              wrapper="footer__icon--wrapper"
+              icon="fa-brands fa-twitter"
+              status="not-working"
+            />
+            <IconButton
+              wrapper="footer__icon--wrapper"
+              icon="fa-brands fa-youtube"
+              status="not-working"
+            />
           </div>
         </div>
       </div>

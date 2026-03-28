@@ -1,14 +1,10 @@
 import Link from "../ui/Link";
 import Modal from "../ui/Modal";
+import useMenu from "@/hooks/useMenu";
 
 function Navbar() {
-  function openMenu() {
-    document.body.classList += " menu--open";
-  }
 
-  function closeMenu() {
-    document.body.classList.remove("menu--open");
-  }
+const { openMenu, closeMenu } = useMenu();
 
   return (
     <nav>
