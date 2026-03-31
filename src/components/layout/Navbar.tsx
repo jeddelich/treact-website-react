@@ -55,7 +55,7 @@ const { openMenu, closeMenu } = useMenu();
               <a className="nav__link--anchor not-working"> Login </a>
               <div className="nav__link--underline-2"></div>
             </li>
-            <li className="nav__link">
+            <li className="nav__link--special">
               <button className="nav__button--sign-up not-working">
                 <a className="nav__link--anchor nav__link--primary not-working">
                   Sign Up
