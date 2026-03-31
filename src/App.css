@@ -30,6 +30,17 @@
   }
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -352,10 +363,14 @@ header .container {
   color: #1a202c;
   line-height: 1.25;
   max-width: 332px;
+  opacity: 0;
+  animation: fadeIn 1500ms 500ms forwards;
 }
 
 .header__description {
   margin: 32px 0;
+  opacity: 0;
+  animation: fadeIn 1500ms 500ms forwards;
 }
 
 .header__button {
@@ -383,6 +398,8 @@ header .container {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 64px;
+  opacity: 0;
+  animation: fadeIn 1500ms 500ms forwards;
 }
 
 .header__illustration--wrapper {
@@ -390,6 +407,13 @@ header .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: fadeIn 500ms forwards;
+}
+
+.header__img--wrapper {
+  opacity: 0;
+  animation: fadeIn 1500ms 500ms forwards;
 }
 
 .header__img {
@@ -408,6 +432,8 @@ header .container {
   position: relative;
   display: flex;
   width: 100%;
+  opacity: 0;
+  animation: fadeIn 2500ms 500ms forwards;
 }
 
 .header__email--input {
@@ -1552,7 +1578,7 @@ FOOTER
 }
 
 @media (max-width: 400px) {
-  .get-started__buttons{
+  .get-started__buttons {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
