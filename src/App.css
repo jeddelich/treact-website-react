@@ -89,7 +89,7 @@ NAVIGATION BAR
 */
 
 .nav__container {
-  padding: 40px 0;
+  padding: 2rem 0;
 }
 
 .nav__row {
@@ -184,20 +184,19 @@ NAVIGATION BAR
 
 .nav__members {
   display: flex;
+  gap: 2rem;
   list-style-type: none;
 }
 
 .nav__link--special {
   font-size: 14px;
   font-weight: 600;
-  margin: 0 36px;
   align-content: center;
   position: relative;
   animation: fadeIn 1s forwards;
 }
 
 .nav__link--login {
-  margin-left: 24px;
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
