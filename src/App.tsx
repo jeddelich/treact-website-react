@@ -319,7 +319,7 @@ function App() {
         <section id="get-started">
           <div className="container">
             <div className="row">
-              <div className="get-started__container">
+              <motion.div className="get-started__container" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <div className="get-started__row">
                   <div className="get-started__title">
                     Developers all over the world are happily using Treact.
@@ -333,7 +333,7 @@ function App() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

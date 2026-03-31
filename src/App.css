@@ -8,7 +8,7 @@
   color: #243e63;
 }
 
-/* ANIMATIONS */
+/* ===== ANIMATIONS ===== */
 
 @keyframes fadeIn {
   from {
@@ -44,6 +44,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ===== GLOBAL ===== */
 
 body.menu--open {
   overflow: hidden;
@@ -82,11 +84,7 @@ p {
   padding: 80px 0;
 }
 
-/* 
-
-NAVIGATION BAR 
-
-*/
+/* ===== NAVIGATION ===== */
 
 .nav__container {
   padding: 2rem 0;
@@ -126,7 +124,6 @@ NAVIGATION BAR
 
 .nav__list {
   display: flex;
-  list-style-type: none;
 }
 
 .nav__link {
@@ -164,35 +161,37 @@ NAVIGATION BAR
   cursor: pointer;
 }
 
-.nav__link--underline {
-  position: absolute;
-  width: 100%;
-  border-bottom: 2px solid #6415ff;
-  bottom: -8px;
-  opacity: 0;
-  transition: all 300ms ease;
-}
-
+.nav__link--underline,
 .nav__link--underline-2 {
   position: absolute;
   width: 100%;
   border-bottom: 2px solid #6415ff;
-  bottom: 2px;
   opacity: 0;
   transition: all 300ms ease;
+}
+
+.nav__link--underline {
+  bottom: -8px;
+}
+
+.nav__link--underline-2 {
+  bottom: 2px;
 }
 
 .nav__members {
   display: flex;
   gap: 2rem;
-  list-style-type: none;
 }
 
-.nav__link--special {
+.nav__link--special,
+.nav__link--login {
   font-size: 14px;
   font-weight: 600;
   align-content: center;
   position: relative;
+}
+
+.nav__link--special {
   animation: fadeIn 1s forwards;
 }
 
@@ -200,10 +199,6 @@ NAVIGATION BAR
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
-  align-content: center;
-  font-size: 14px;
-  font-weight: 600;
-  position: relative;
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -221,18 +216,20 @@ NAVIGATION BAR
   margin-right: 0;
 }
 
-.nav__button--sign-up {
+.nav__button--sign-up,
+.header__button,
+.quality-work__button {
   border: none;
+  background-color: #6415ff;
+  color: #fff;
+}
+
+.nav__button--sign-up {
   padding: 10px 32px;
   font-weight: 600;
-  background-color: #6415ff;
   border-radius: 24px;
   line-height: 1.5;
   transition: all 300ms ease;
-}
-
-.nav__button--sign-up:hover {
-  background-color: #4e11c8;
 }
 
 .not-working {
@@ -309,7 +306,6 @@ NAVIGATION BAR
 }
 
 .menu__list {
-  list-style-type: none;
   margin-bottom: 24px;
   font-weight: 600;
 }
@@ -334,11 +330,13 @@ NAVIGATION BAR
   margin-top: 16px;
 }
 
-/* 
+.nav__list,
+.nav__members,
+.menu__list {
+  list-style-type: none;
+}
 
-HEADER 
-
-*/
+/* ===== HEADER ===== */
 
 header .container {
   height: calc(100vh - 124px);
@@ -373,9 +371,6 @@ header .container {
 }
 
 .header__button {
-  background-color: #6415ff;
-  color: #fff;
-  border: none;
   font-weight: 700;
   font-size: 16px;
   padding: 14px 22px;
@@ -385,10 +380,6 @@ header .container {
   top: 8px;
   left: 255px;
   z-index: 1;
-}
-
-.header__button:hover {
-  background-color: #4e11c8;
 }
 
 .header__customers {
@@ -456,11 +447,7 @@ header .container {
   opacity: 0;
 }
 
-/* 
-
-FEATURES 
-
-*/
+/* ===== FEATURES ===== */
 
 .features__row {
   flex-direction: column;
@@ -539,15 +526,14 @@ FEATURES
   text-align: center;
 }
 
-/* 
+/* ===== SHARED SECTION STYLES ===== */
 
-QUALITY WORK SECTION
-
-*/
-
-#quality-work .section__text {
+#quality-work .section__text,
+#values .section__text {
   text-align: left;
 }
+
+/* ===== QUALITY WORK ===== */
 
 .quality-work__row {
   display: flex;
@@ -571,24 +557,13 @@ QUALITY WORK SECTION
 
 .quality-work__button {
   margin-top: 32px;
-  background-color: #6415ff;
   padding: 12px 32px;
   font-size: 14px;
   border-radius: 24px;
-  border: none;
-  color: #fff;
   font-weight: bold;
 }
 
-.quality-work__button:hover {
-  background-color: #4e11c8;
-}
-
-/* 
-
-STEPS 
-
-*/
+/* ===== STEPS ===== */
 
 #steps .row {
   align-items: center;
@@ -641,15 +616,7 @@ STEPS
   max-width: 400px;
 }
 
-/* 
-
-VALUES 
-
-*/
-
-#values .section__text {
-  text-align: left;
-}
+/* ===== VALUES ===== */
 
 .values__row {
   padding: 0 32px;
@@ -724,11 +691,7 @@ VALUES
   width: 175px;
 }
 
-/* 
-
-PRICING 
-
-*/
+/* ===== PRICING ===== */
 
 .pricing__row {
   flex-direction: column;
@@ -902,11 +865,7 @@ PRICING
   );
 }
 
-/* 
-
-TESTIMONIALS 
-
-*/
+/* ===== TESTIMONIALS ===== */
 
 #testimonials .row {
   padding: 0 32px;
@@ -1000,11 +959,7 @@ TESTIMONIALS
   font-weight: 500;
 }
 
-/* 
-
-GET STARTED 
-
-*/
+/* ===== GET STARTED ===== */
 
 #get-started {
   padding: 0 32px;
@@ -1073,11 +1028,7 @@ GET STARTED
   color: #6415ff;
 }
 
-/* 
-
-FOOTER 
-
-*/
+/* ===== FOOTER ===== */
 
 .footer__row {
   display: flex;
@@ -1189,6 +1140,14 @@ FOOTER
 .footer__icon--wrapper:hover {
   background-color: #d4d9dc;
 }
+
+.nav__button--sign-up:hover,
+.header__button:hover,
+.quality-work__button:hover {
+  background-color: #4e11c8;
+}
+
+/* ===== RESPONSIVE: 1024PX ===== */
 
 @media (max-width: 1024px) {
   .get-started__container {
@@ -1309,11 +1268,15 @@ FOOTER
   }
 }
 
+/* ===== RESPONSIVE: 844PX ===== */
+
 @media (max-width: 844px) {
   .plan__target-audience {
     max-width: 125px;
   }
 }
+
+/* ===== RESPONSIVE: 768PX ===== */
 
 @media (max-width: 768px) {
   .feature {
@@ -1448,7 +1411,6 @@ FOOTER
   }
 
   .footer__columns {
-    justify-content: flex-start;
     flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
@@ -1461,6 +1423,8 @@ FOOTER
     font-size: 24px;
   }
 }
+
+/* ===== RESPONSIVE: 640PX ===== */
 
 @media (max-width: 640px) {
   .header__email--submission {
@@ -1535,6 +1499,8 @@ FOOTER
   }
 }
 
+/* ===== RESPONSIVE: 480PX ===== */
+
 @media (max-width: 480px) {
   .pricing__list--plan {
     width: 100%;
@@ -1579,6 +1545,8 @@ FOOTER
     margin: 0;
   }
 }
+
+/* ===== RESPONSIVE: 400PX ===== */
 
 @media (max-width: 400px) {
   .get-started__buttons {
