@@ -108,7 +108,7 @@ function App() {
         <section id="quality-work">
           <div className="container">
             <div className="row quality-work__row">
-              <div className="quality-work__description">
+              <motion.div className="quality-work__description" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <h4 className="section__title">Quality Work</h4>
                 <h2 className="section__subtitle">
                   Designed & Developed by
@@ -122,7 +122,7 @@ function App() {
                 <button className="quality-work__button not-working">
                   Learn More
                 </button>
-              </div>
+              </motion.div>
               <figure className="quality-work__img--wrapper">
                 <img
                   className="quality-work__img"
@@ -172,7 +172,7 @@ function App() {
         <section id="values">
           <div className="container">
             <div className="row values__row">
-              <div className="values__side--left">
+              <motion.div className="values__side--left" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <h4 className="section__title">Values</h4>
                 <h4 className="section__subtitle">
                   We Always Abide by Our
@@ -197,7 +197,7 @@ function App() {
                 <button className="quality-work__button not-working">
                   Learn More
                 </button>
-              </div>
+              </motion.div>
               <figure className="values__illustration--wrapper">
                 <img
                   src="https://module-2-fp-example-website.vercel.app/assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
@@ -251,7 +251,7 @@ function App() {
                   alt=""
                 />
               </figure>
-              <div className="testimonials__side--right">
+              <motion.div className="testimonials__side--right" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <h4 className="section__title">Testimonials</h4>
                 <h4 className="section__subtitle">
                   Our Clients
@@ -309,7 +309,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

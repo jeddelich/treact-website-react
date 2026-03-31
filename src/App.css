@@ -692,7 +692,7 @@ VALUES
 
 .values__list {
   display: flex;
-  margin-bottom: 32px;
+  margin: 16px 0;
 }
 
 .list__value {
@@ -1031,6 +1031,7 @@ GET STARTED
   line-height: 1.5;
   width: 50%;
   flex-wrap: wrap;
+  max-width: 448px;
 }
 
 .get-started__button {
@@ -1084,10 +1085,12 @@ FOOTER
   width: 100%;
   max-width: 1280px;
   background-color: #6415ff;
+  padding: 0 1rem;
 }
 
 .footer__columns {
-  margin: 72px 0;
+  margin: 4rem 0 3rem;
+  padding: 0 2rem;
   width: 95%;
   justify-content: space-between;
   display: flex;
@@ -1145,12 +1148,13 @@ FOOTER
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 72px 0;
+  margin: 2rem 0;
 }
 
 .footer__branding {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .footer__copyright {

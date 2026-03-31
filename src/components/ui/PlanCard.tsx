@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function PlanCard({
   title,
   price,
@@ -12,7 +14,12 @@ function PlanCard({
   highlights: string[];
 }) {
   return (
-    <div className="pricing__list--plan">
+    <motion.div
+      className="pricing__list--plan"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div className="plan__stripe"></div>
       <div className="list__plan--top-half">
         <h3 className="plan__title">{title}</h3>
@@ -30,7 +37,7 @@ function PlanCard({
       </div>
       <hr className="pricing__line--break" />
       <button className="plan__button not-working">Buy Now</button>
-    </div>
+    </motion.div>
   );
 }
 
