@@ -243,6 +243,8 @@ p {
   text-align: center;
   cursor: pointer;
   display: none;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .button__menu:hover {
@@ -1110,6 +1112,7 @@ header .container {
 
 .footer__copyright {
   color: #f7fafc;
+  text-align: center;
 }
 
 .footer__logo--text {
@@ -1291,7 +1294,7 @@ header .container {
 
   .quality-work__row {
     flex-direction: column-reverse;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .quality-work__img--wrapper {
@@ -1406,8 +1409,8 @@ header .container {
 
   .footer__column {
     width: calc(100% / 3);
-    margin-top: 48px;
     align-items: center;
+    text-align: center;
   }
 
   .footer__columns {
