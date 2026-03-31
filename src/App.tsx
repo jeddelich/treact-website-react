@@ -1,5 +1,6 @@
 // Styles
 import "@/App.css";
+import { motion } from "framer-motion";
 
 // Data
 import features from "@/data/features";
@@ -70,7 +71,12 @@ function App() {
         <section id="features">
           <div className="container">
             <div className="row features__row">
-              <div className="section__description">
+              <motion.div
+                className="section__description"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
                 <h4 className="section__title">Features</h4>
                 <h2 className="section__subtitle">
                   We Have Amazing{" "}
@@ -80,7 +86,7 @@ function App() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Culpa, ea nostrum illo facere quam fugiat iure!
                 </p>
-              </div>
+              </motion.div>
               <div className="features">
                 <div className="feature__list">
                   {features.map((feature) => (
